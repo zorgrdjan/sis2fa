@@ -4,7 +4,7 @@ include('class/userClass.php');
 $userClass = new userClass();
 $userDetails=$userClass->userDetails($_SESSION['uid']);
 
-if($_POST['code'])
+if(isset($_POST['code']))
 {
 $code=$_POST['code'];
 $secret=$userDetails->google_auth_code;
